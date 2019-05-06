@@ -3,30 +3,33 @@ package com.nelliott.noahcollegeapp;
 import java.util.Date;
 
 public class Profile {
-
-    String lastName = "Elliott";
-    String firstName = "Noah";
+    String mFirstName;
+    String mLastName;
+    String mEmail;
+    String mObjectId;
     Date dateOfBirth;
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
+    private final static String photoFilename = "IMG_PROFILE.jpg";
     public String getFirstName() {
-        return firstName;
-    }
-
+        return mFirstName; }
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
+        mFirstName = firstName; }
+    public String getLastName() {
+        return mLastName; }
+    public void setLastName(String lastName) {
+        mLastName = lastName; }
+    public String getEmail() {
+        return mEmail; }
+    public void setEmail(String email) {
+        mEmail = email; }
+    public Profile(String firstName, String lastName){
+        mFirstName = firstName;
+        mLastName = lastName; }
     public Profile(){
-        dateOfBirth = new Date();
-    }
-
-
+        dateOfBirth = new Date(); }
+    public void setObjectId(String objectId) {
+        mObjectId = objectId; }
+    public String getObjectId() {
+        return mObjectId; }
+    public String getPhotoFilename(){
+        return photoFilename; }
 }
